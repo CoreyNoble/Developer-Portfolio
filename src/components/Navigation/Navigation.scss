@@ -1,0 +1,58 @@
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 18.75rem;
+
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 18.75rem;
+    background: rgb(0, 174, 255);
+  }
+
+  button {
+    outline: none;
+    border: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1.125rem;
+    right: 0.9375rem;
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    padding: 1.5625rem;
+    position: absolute;
+    top: 6.25rem;
+    width: 14.375rem;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
