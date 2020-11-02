@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Typography from '@material-ui/core/Typography';
 
@@ -30,14 +31,14 @@ export const MenuItem = ({ linkTitle, linkText, link, target, rel, icon, style }
         whileTap={{ scale: 0.95 }}
         style={style}
       >
-        <a 
-          href={link}
+        <Link 
+          to={`${process.env.PUBLIC_URL}${link}`}
           title={linkTitle}
           target={target}
           rel={rel}
         >
           {icon}
-        </a>
+        </Link>
       </motion.li>
     );
   } else {
@@ -47,8 +48,8 @@ export const MenuItem = ({ linkTitle, linkText, link, target, rel, icon, style }
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
-        <a 
-          href={link} 
+        <Link 
+          to={`${process.env.PUBLIC_URL}${link}`}
           title={linkTitle}
           target={target}
           rel={rel}
@@ -56,7 +57,7 @@ export const MenuItem = ({ linkTitle, linkText, link, target, rel, icon, style }
           <Typography variant="h6" component="body1" gutterBottom>
             {linkText}
           </Typography>
-        </a>
+        </Link>
       </motion.li>
     );
   }
