@@ -54,7 +54,7 @@ export const MenuItem = ({ linkTitle, linkText, link, target, rel, icon, style }
           target={target}
           rel={rel}
         >
-          <Typography variant="h6" component="body1" gutterBottom>
+          <Typography variant="h6" component="p" gutterBottom>
             {linkText}
           </Typography>
         </Link>

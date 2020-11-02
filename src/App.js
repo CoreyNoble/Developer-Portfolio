@@ -11,6 +11,8 @@ import { Navigation } from "./components/Navigation/Navigation";
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 
+import ContactForm from './components/ContactForm/ContactForm';
+
 function App() {
   function NotFound() {
     return (
@@ -144,7 +146,10 @@ function App() {
 
   function Contact() {
     return (
-      <h1>Contact</h1>
+      <React.Fragment>
+        <h1>Contact</h1>
+        <ContactForm />
+      </React.Fragment>
     );
   }
 
