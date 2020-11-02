@@ -65,7 +65,7 @@ const items = [
   {
     id: 6,
     linkTitle: 'Visit My GitHub',
-    link: 'https://github.com/CoreyNoble',
+    link: '//github.com/CoreyNoble',
     target: '_blank', 
     rel: "noopener noreferrer",
     icon: <FaGithub size={iconSize} />,
@@ -77,7 +77,7 @@ const items = [
   {
     id: 7,
     linkTitle: 'View My LinkedIn Profile',
-    link: 'https://ca.linkedin.com/in/corey-noble',
+    link: '//ca.linkedin.com/in/corey-noble',
     target: '_blank', 
     rel: "noopener noreferrer",
     icon: <FaLinkedin size={iconSize}/>,
