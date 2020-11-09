@@ -29,7 +29,7 @@ export const MenuList = () => (
   </motion.ul>
 );
 
-const iconSize = "2rem";
+const iconSize = '2rem';
 
 const items = [
   {
