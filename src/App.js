@@ -11,7 +11,8 @@ import { Navigation } from "./components/Navigation/Navigation";
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 
-import ContactForm from './components/ContactForm/ContactForm';
+const Hero = React.lazy(() => import('./components/Hero/Hero'));
+const ContactForm = React.lazy(() => import('./components/ContactForm/ContactForm'));
 
 function App() {
   function NotFound() {
@@ -155,7 +156,7 @@ function App() {
 
   function Index() {
     return (
-      <h1>Home</h1>
+      <Hero />
     );
   }
 
