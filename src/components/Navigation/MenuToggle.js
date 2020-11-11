@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const Path = props => (
   <motion.path
-    fill="transparent"
+    fill="#ffffff"
     strokeWidth="3"
-    stroke="hsl(0, 0%, 18%)"
+    stroke="#ffffff"
     strokeLinecap="round"
     {...props}
   />

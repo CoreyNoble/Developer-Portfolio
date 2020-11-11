@@ -12,7 +12,7 @@ nav {
     left: 0;
     bottom: 0;
     width: 18.75rem;
-    background: #fff;
+    background: #000;
   }
 
   button {
@@ -52,8 +52,8 @@ nav {
     cursor: pointer;
 
     a {
+      color: #fff;
       text-decoration: none;
-      color: inherit;
     }
   }
 }
