@@ -12,6 +12,8 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 
 const Hero = React.lazy(() => import('./components/Hero/Hero'));
+const Introduction = React.lazy(() => import('./components/Introduction/Introduction'));
+
 const ContactForm = React.lazy(() => import('./components/ContactForm/ContactForm'));
 
 function App() {
@@ -156,7 +158,10 @@ function App() {
 
   function Index() {
     return (
-      <Hero />
+      <React.Fragment>
+        <Hero />
+        <Introduction />
+      </React.Fragment>
     );
   }
 
