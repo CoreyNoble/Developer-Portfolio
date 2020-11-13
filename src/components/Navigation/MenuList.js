@@ -38,12 +38,12 @@ const items = [
     linkTitle: 'Visit My Homepage',
     link: '/'
   },
-  {
-    id: 2,
-    linkText: 'Portfolio',
-    linkTitle: 'View My Portfolo',
-    link: '/portfolio'
-  },
+  // {
+  //   id: 2,
+  //   linkText: 'Portfolio',
+  //   linkTitle: 'View My Portfolo',
+  //   link: '/portfolio'
+  // },
   {
     id: 3,
     linkText: 'About',
