@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import {
   BrowserRouter as Router,
+  Link,
   Switch,
   Route,
   useRouteMatch
@@ -8,11 +9,11 @@ import {
 import CssBaseline from '@material-ui/core/CssBaseline';
 import './App.scss';
 import { Navigation } from "./components/Navigation/Navigation";
-import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 
 const Hero = React.lazy(() => import('./components/Hero/Hero'));
 const Introduction = React.lazy(() => import('./components/Introduction/Introduction'));
+const Portfolio = React.lazy(() => import('./components/Portfolio/Portfolio'));
 
 const ContactForm = React.lazy(() => import('./components/ContactForm/ContactForm'));
 
@@ -72,32 +73,32 @@ function App() {
             </Suspense>
           )} 
         />
-        <Route 
+        {/* <Route 
           path={match.path} 
           render={() => (
             <Suspense fallback={<div>Loading...</div>}>
               <Portfolio />
             </Suspense>
           )} 
-        />
+        /> */}
       </Switch>
     );
   }
 
-  function Portfolio() {
-    return (
-      <React.Fragment>
-        <h1>Portfolio</h1>
+  // function Portfolio() {
+  //   return (
+  //     <React.Fragment>
+  //       <h1>Portfolio</h1>
 
-        <ButtonGroup color="primary" orientation="vertical">
-          <Button href="/portfolio/portfolio-entry-1" variant="contained" color="primary">Portfolio Entry 1</Button>
-          <Button href="/portfolio/portfolio-entry-2" variant="contained" color="primary">Portfolio Entry 2</Button>
-          <Button href="/portfolio/portfolio-entry-3" variant="contained" color="primary">Portfolio Entry 3</Button>
-          <Button href="/portfolio/portfolio-entry-4" variant="contained" color="primary">Portfolio Entry 4</Button>
-        </ButtonGroup>
-      </React.Fragment>
-    );
-  }
+  //       <ButtonGroup color="primary" orientation="vertical">
+  //         <Button href="/portfolio/portfolio-entry-1" variant="contained" color="primary">Portfolio Entry 1</Button>
+  //         <Button href="/portfolio/portfolio-entry-2" variant="contained" color="primary">Portfolio Entry 2</Button>
+  //         <Button href="/portfolio/portfolio-entry-3" variant="contained" color="primary">Portfolio Entry 3</Button>
+  //         <Button href="/portfolio/portfolio-entry-4" variant="contained" color="primary">Portfolio Entry 4</Button>
+  //       </ButtonGroup>
+  //     </React.Fragment>
+  //   );
+  // }
 
   function PortfolioEntry1() {
     return (
@@ -161,6 +162,7 @@ function App() {
       <React.Fragment>
         <Hero />
         <Introduction />
+        <Portfolio />
       </React.Fragment>
     );
   }
@@ -200,14 +202,14 @@ function App() {
               )} 
             />
 
-            <Route 
+            {/* <Route 
               path="/portfolio" 
               render={() => (
                 <Suspense fallback={<div>Loading...</div>}>
                   <PortfolioRouter />
                 </Suspense>
               )} 
-            />
+            /> */}
 
             <Route 
               path="/about" 

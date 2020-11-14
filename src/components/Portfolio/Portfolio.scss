@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+.PortfolioBackground {
+  position: relative;
+  margin: 4.25rem 0;
+  padding: 7.5rem 0;
+  background-color: #9e0025;
+  color: #fff;
+
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 50%;
+    background: inherit;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome
+  }
+
+  &:before {
+    top: 0;
+    transform: skewY(5.5deg);
+    transform-origin: 100% 0;
+
+    /* Grid: md */
+    @media screen and (min-width: 60rem) {
+      transform: skewY(3.8deg);
+    }
+
+    /* Grid: lg */
+    @media screen and (min-width: 80rem) {
+      transform: skewY(2deg);
+    }
+  }
+  
+  &:after {
+    bottom: 0;
+    transform: skewY(5.5deg);
+    transform-origin: 0 100%;
+
+    /* Grid: md */
+    @media screen and (min-width: 60rem) {
+      transform: skewY(3.8deg);
+    }
+
+    /* Grid: lg */
+    @media screen and (min-width: 80rem) {
+      transform: skewY(2deg);
+    }
+  }
+
+  h3 {
+    font-family: 'Rubik', 'Roboto', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  h6 {
+    font-family: 'Rubik', 'Roboto', Helvetica, Arial, sans-serif;
+  }
+
+  
+  .PortfolioIcons {
+    position: absolute;
+    top: -6.5rem;
+    right: -2.9rem;
+
+    /* Grid: sm */
+    @media screen and (min-width: 37.5rem) {
+      right: 0;
+    }
+
+    .PortfolioIcon {
+      position: absolute;
+      top: 10rem;
+      transform: rotate(0deg);
+      z-index: -2;
+    }
+    
+    .PortfolioIcon1 {
+      color: #ccc;
+      right: 3rem;
+      animation: movePortfolioIcon1 1.5s;
+      animation-fill-mode: forwards;
+      animation-delay: 1s;
+    }
+
+    .PortfolioIcon2 {
+      color: #666;
+      right: 8.25rem;
+      transform: rotate(-12deg);
+      animation: movePortfolioIcon2 1.5s;
+      animation-fill-mode: forwards;
+      animation-delay: 1.66s;
+    }
+
+    .PortfolioIcon3 {
+      color: #000;
+      right: 13rem;
+      animation: movePortfolioIcon3 1.5s;
+      animation-fill-mode: forwards;
+      animation-delay: 2s;
+    }
+  }
+
+  .PortfolioItem {
+    position: relative;
+    margin-top: 2rem;
+    transition: transform 0.15s;
+
+    &:hover, &:focus, &:active {
+      transform: scale(1.05);
+    }
+
+    a {
+      display: inline;
+      line-height: 0;
+      color: #fff;
+      text-decoration: none;
+      transform-origin: center;
+      transition: color 0.15s;
+  
+      &:hover, &:focus {
+        text-decoration: underline;
+        color: #f7aba5;
+      }
+
+      &:active {
+        color: #fff;
+      }
+    }
+
+    img {
+      width: 100%;
+      max-width: 960px;
+      border-top-left-radius: 0.45rem;
+      border-top-right-radius: 0.45rem;
+      box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),
+                  0px 1px 1px 0px rgba(0,0,0,0.14),
+                  0px 1px 3px 0px rgba(0,0,0,0.12);
+    }
+
+    .InfoCTA {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      color: #4f0012;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: transform 0.2s,
+                  color 0.2s,
+                  background-color 0.2s;
+
+      &:hover, &:focus, &:active {
+        background-color: #000;
+        transform: rotate(12deg);
+      }
+
+      &:active {
+        color: #fff;
+        background: #000;
+      }
+    }
+
+    .PortfolioItemInfo {
+      background: rgba(0, 0, 0, 0.5);
+      border-bottom-left-radius: 0.45rem;
+      border-bottom-right-radius: 0.45rem;
+      box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),
+                  0px 1px 1px 0px rgba(0,0,0,0.14),
+                  0px 1px 3px 0px rgba(0,0,0,0.12);
+
+      a {
+        display: block;
+        padding: 0.5rem;
+      }
+
+      .GitHubCTA {
+        float: right;
+        transition: transform 0.2s, color 0.2s;
+
+        &:hover, &:focus, &:active {
+          transform: rotate(12deg);
+        }
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes movePortfolioIcon1 {
+  0% {
+    top: 10rem;
+    transform: rotate(0deg);
+    z-index: -2;
+  }
+  50% {
+    top: -5rem;
+    transform: rotate(6deg);
+    z-index: -2;
+  }
+  100% {
+    top: 0;
+    transform: rotate(12deg);
+    z-index: 1;
+  }
+}
+
+@keyframes movePortfolioIcon2 {
+  0% {
+    top: 10rem;
+    transform: rotate(-12deg);
+    z-index: -2;
+  }
+  50% {
+    top: -5rem;
+    transform: rotate(-6deg);
+    z-index: -2;
+  }
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+    z-index: 3;
+  }
+}
+
+@keyframes movePortfolioIcon3 {
+  0% {
+    top: 10rem;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: -1rem;
+    transform: rotate(-18deg);
+  }
+}
