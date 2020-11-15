@@ -1,0 +1,18 @@
+<svg width="304" height="260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradientCrown" gradientTransform="rotate(120)">
+      <stop offset="0%"   stop-color="#848484" />
+      <stop offset="100%" stop-color="#7d7d7d" />
+    </linearGradient>
+  </defs>
+  <g>
+    <rect fill="#000" fill-opacity='0' id="canvas_background" height="262" width="306" y="-1" x="-1"/>
+    <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+    <rect fill="#000" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+    </g>
+  </g>
+  <g>
+    <path fill-opacity="0" id="svg_1" d="m11.59251,129.7323l60.25003,-120.50001l160.66674,0l60.25001,120.50001l-60.25001,120.50001l-160.66674,0l-60.25003,-120.50001z" stroke-width="18.5" stroke="url(#gradientCrown)" fill="url(#gradientCrown)"/>
+    <path stroke="url(#gradientCrown)" id="svg_3" d="m40.7375,130.63655l47.85716,-95.71427l127.61909,0l47.85715,95.71427l-47.85715,95.71427l-127.61909,0l-47.85716,-95.71427z" stroke-opacity="null" stroke-width="0" fill="#000"/>
+  </g>
+</svg>

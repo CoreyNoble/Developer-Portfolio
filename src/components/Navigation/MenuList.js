@@ -44,12 +44,12 @@ const items = [
   //   linkTitle: 'View My Portfolo',
   //   link: '/portfolio'
   // },
-  {
-    id: 3,
-    linkText: 'About',
-    linkTitle: 'Learn More About Me',
-    link: '/about'
-  },
+  // {
+  //   id: 3,
+  //   linkText: 'About',
+  //   linkTitle: 'Learn More About Me',
+  //   link: '/about'
+  // },
   {
     id: 4,
     linkText: 'Blog',
