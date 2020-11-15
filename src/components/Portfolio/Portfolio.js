@@ -16,12 +16,8 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
 // Icons
-import { FaGithub } from 'react-icons/fa';
-import { BsFillInfoCircleFill } from 'react-icons/bs';
-
-import { FaClipboardList } from 'react-icons/fa';
-import { BsBrush } from 'react-icons/bs';
-import { FaFileCode } from 'react-icons/fa';
+import { FaGithub, FaClipboardList, FaFileCode } from 'react-icons/fa';
+import { BsBrush, BsFillInfoCircleFill } from 'react-icons/bs';
 
 // Images
 import PlaceholderImageSmall from '../../assets/img/portfolio/placeholder-image-small.png';

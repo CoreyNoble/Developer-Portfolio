@@ -13,6 +13,7 @@ import Button from '@material-ui/core/Button';
 
 const Hero = React.lazy(() => import('./components/Hero/Hero'));
 const Introduction = React.lazy(() => import('./components/Introduction/Introduction'));
+const About = React.lazy(() => import('./components/About/About'));
 const Portfolio = React.lazy(() => import('./components/Portfolio/Portfolio'));
 
 const ContactForm = React.lazy(() => import('./components/ContactForm/ContactForm'));
@@ -136,11 +137,11 @@ function App() {
     );
   }
 
-  function About() {
-    return (
-      <h1>About</h1>
-    );
-  }
+  // function About() {
+  //   return (
+  //     <h1>About</h1>
+  //   );
+  // }
 
   function Blog() {
     return (
@@ -162,6 +163,7 @@ function App() {
       <React.Fragment>
         <Hero />
         <Introduction />
+        <About />
         <Portfolio />
       </React.Fragment>
     );
@@ -211,14 +213,14 @@ function App() {
               )} 
             /> */}
 
-            <Route 
+            {/* <Route 
               path="/about" 
               render={() => (
                 <Suspense fallback={<div>Loading...</div>}>
                   <About />
                 </Suspense>
               )} 
-            />
+            /> */}
 
             <Route 
               path="/blog" 
