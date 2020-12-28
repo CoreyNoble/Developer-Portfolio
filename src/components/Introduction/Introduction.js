@@ -9,7 +9,7 @@ import { IoIosMail } from 'react-icons/io';
 
 import './Introduction.scss';
 
-export default function Hero() {
+export default function Introduction() {
   return (
     <React.Fragment>
       <Container component="main" maxWidth="lg">
