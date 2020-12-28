@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+.Footer {
+  margin-top: 12rem;
+
+  h2 {
+    font-family: 'Rubik', 'Roboto', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  p {
+    font-family: 'Rubik', 'Roboto', Helvetica, Arial, sans-serif;
+    margin-bottom: 2rem;
+  }
+
+  .ContactCTAs {
+    a {
+      display: block;
+      margin-bottom: 2rem;
+
+      span {
+        display: inline-block;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+.Copyright {
+  margin-top: 6rem;
+  padding: 2rem 0;
+  background-color: #000;
+  color: #666;
+  text-align: center;
+}

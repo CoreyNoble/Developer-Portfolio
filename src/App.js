@@ -9,6 +9,7 @@ import {
 import CssBaseline from '@material-ui/core/CssBaseline';
 import './App.scss';
 import { Navigation } from "./components/Navigation/Navigation";
+import { Footer } from "./components/Footer/Footer";
 import Button from '@material-ui/core/Button';
 
 const Hero = React.lazy(() => import('./components/Hero/Hero'));
@@ -250,6 +251,8 @@ function App() {
             />
           </Switch>
         </main>
+
+        <Footer />
       </div>
     </Router>
   );
