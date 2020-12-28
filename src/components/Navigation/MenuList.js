@@ -38,32 +38,26 @@ const items = [
     linkTitle: 'Visit My Homepage',
     link: '/'
   },
-  // {
-  //   id: 2,
-  //   linkText: 'Portfolio',
-  //   linkTitle: 'View My Portfolo',
-  //   link: '/portfolio'
-  // },
-  // {
-  //   id: 3,
-  //   linkText: 'About',
-  //   linkTitle: 'Learn More About Me',
-  //   link: '/about'
-  // },
   {
-    id: 4,
-    linkText: 'Blog',
-    linkTitle: 'Visit My Blog',
-    link: '/blog'
+    id: 2,
+    linkText: 'Portfolio',
+    linkTitle: 'View My Portfolo',
+    link: '/portfolio'
   },
   {
-    id: 5,
+    id: 3,
+    linkText: 'About',
+    linkTitle: 'Learn More About Me',
+    link: '/about'
+  },
+  {
+    id: 4,
     linkText: 'Contact',
     linkTitle: 'Contact Me',
     link: '/contact'
   },
   {
-    id: 6,
+    id: 5,
     linkTitle: 'Visit My GitHub',
     link: '//github.com/CoreyNoble',
     target: '_blank', 
@@ -75,7 +69,7 @@ const items = [
     }
   },
   {
-    id: 7,
+    id: 6,
     linkTitle: 'View My LinkedIn Profile',
     link: '//ca.linkedin.com/in/corey-noble',
     target: '_blank', 
