@@ -6,16 +6,19 @@ import {
   Route,
   useRouteMatch
 } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 import './App.scss';
 import { Navigation } from "./components/Navigation/Navigation";
 import { Footer } from "./components/Footer/Footer";
 import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 const Hero = React.lazy(() => import('./components/Hero/Hero'));
 const Introduction = React.lazy(() => import('./components/Introduction/Introduction'));
-const About = React.lazy(() => import('./components/About/About'));
-const Portfolio = React.lazy(() => import('./components/Portfolio/Portfolio'));
+const AboutComponent = React.lazy(() => import('./components/About/About'));
+const PortfolioComponent = React.lazy(() => import('./components/Portfolio/Portfolio'));
 
 const ContactForm = React.lazy(() => import('./components/ContactForm/ContactForm'));
 
@@ -75,32 +78,38 @@ function App() {
             </Suspense>
           )} 
         />
-        {/* <Route 
+        <Route 
           path={match.path} 
           render={() => (
             <Suspense fallback={<div>Loading...</div>}>
               <Portfolio />
             </Suspense>
           )} 
-        /> */}
+        />
       </Switch>
     );
   }
 
-  // function Portfolio() {
-  //   return (
-  //     <React.Fragment>
-  //       <h1>Portfolio</h1>
+  function Portfolio() {
+    return (
+      <React.Fragment>
+        <Helmet>
+          <title>Portfolio | Corey Noble</title>
+          <meta name="description" content="View my portfolio. Corey Noble, Web Developer. Look at some of my past work to see why my skills can benefit you." />
+          <link rel="canonical" href="http://corey-noble.com/portfolio" />
+        </Helmet>
 
-  //       <ButtonGroup color="primary" orientation="vertical">
-  //         <Button href="/portfolio/portfolio-entry-1" variant="contained" color="primary">Portfolio Entry 1</Button>
-  //         <Button href="/portfolio/portfolio-entry-2" variant="contained" color="primary">Portfolio Entry 2</Button>
-  //         <Button href="/portfolio/portfolio-entry-3" variant="contained" color="primary">Portfolio Entry 3</Button>
-  //         <Button href="/portfolio/portfolio-entry-4" variant="contained" color="primary">Portfolio Entry 4</Button>
-  //       </ButtonGroup>
-  //     </React.Fragment>
-  //   );
-  // }
+        <h1>Portfolio</h1>
+
+        <ButtonGroup color="primary" orientation="vertical">
+          <Button href="/portfolio/portfolio-entry-1" variant="contained" color="primary">Portfolio Entry 1</Button>
+          <Button href="/portfolio/portfolio-entry-2" variant="contained" color="primary">Portfolio Entry 2</Button>
+          <Button href="/portfolio/portfolio-entry-3" variant="contained" color="primary">Portfolio Entry 3</Button>
+          <Button href="/portfolio/portfolio-entry-4" variant="contained" color="primary">Portfolio Entry 4</Button>
+        </ButtonGroup>
+      </React.Fragment>
+    );
+  }
 
   function PortfolioEntry1() {
     return (
@@ -138,21 +147,30 @@ function App() {
     );
   }
 
-  // function About() {
-  //   return (
-  //     <h1>About</h1>
-  //   );
-  // }
-
-  function Blog() {
+  function About() {
     return (
-      <h1>Blog</h1>
+      <React.Fragment>
+        <Helmet>
+          <title>About Me | Corey Noble</title>
+          <meta name="description" content="Details about me - Corey Noble, Web Developer. View my skill set, work experience and a summary of why I became a Web Developer." />
+          <link rel="canonical" href="http://corey-noble.com/about" />
+        </Helmet>
+
+        <h1>About Me</h1>
+        <Button href="/portfolio" variant="contained" color="primary">Back to Portfolio</Button>
+      </React.Fragment>
     );
   }
 
   function Contact() {
     return (
       <React.Fragment>
+        <Helmet>
+          <title>Contact Me | Corey Noble</title>
+          <meta name="description" content="Contact Me - Corey Noble | Web Application Developer" />
+          <link rel="canonical" href="http://corey-noble.com/contact" />
+        </Helmet>
+
         <h1>Contact</h1>
         <ContactForm />
       </React.Fragment>
@@ -164,8 +182,8 @@ function App() {
       <React.Fragment>
         <Hero />
         <Introduction />
-        <About />
-        <Portfolio />
+        <AboutComponent />
+        <PortfolioComponent />
       </React.Fragment>
     );
   }
@@ -174,6 +192,12 @@ function App() {
     <Router>
       <CssBaseline />
       <div className="App">
+        <Helmet>
+          <title>Corey Noble | Web Application Developer</title>
+          <meta name="description" content="Hi, my name is Corey Noble, I am a Web Application Developer currently employed by Evertz Microsystems Ltd., A global leader in broadcast solutions with headquarters based in the beautiful city of Burlington, ON - Canada." />
+          <link rel="canonical" href="http://corey-noble.com" />
+        </Helmet>
+      
         <Navigation />
 
         <main id="main">
@@ -205,29 +229,20 @@ function App() {
               )} 
             />
 
-            {/* <Route 
+            <Route 
               path="/portfolio" 
               render={() => (
                 <Suspense fallback={<div>Loading...</div>}>
                   <PortfolioRouter />
                 </Suspense>
               )} 
-            /> */}
+            />
 
-            {/* <Route 
+            <Route 
               path="/about" 
               render={() => (
                 <Suspense fallback={<div>Loading...</div>}>
                   <About />
-                </Suspense>
-              )} 
-            /> */}
-
-            <Route 
-              path="/blog" 
-              render={() => (
-                <Suspense fallback={<div>Loading...</div>}>
-                  <Blog />
                 </Suspense>
               )} 
             />
@@ -252,7 +267,9 @@ function App() {
           </Switch>
         </main>
 
-        <Footer />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Footer />
+        </Suspense>
       </div>
     </Router>
   );
