@@ -1,0 +1,53 @@
+.Skill {
+  margin-top: 1rem;
+
+  .IconContainer {
+    position: relative;
+
+    .Icon {
+      position: absolute;
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 2rem;
+      z-index: 2;
+
+      &.RotateIconForward {
+        animation: rotateIconForward 10s linear infinite;
+      }
+      
+      &.RotateIconBackward {
+        animation: rotateIconBackward 10s linear infinite;
+      }
+    }
+
+    .IconBG {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 6.5rem;
+      z-index: 1;
+    }
+  }
+}
+
+@keyframes rotateIconForward {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+@keyframes rotateIconBackward {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(-360deg);
+  }
+}
