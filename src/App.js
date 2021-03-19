@@ -11,6 +11,8 @@ import { Helmet } from "react-helmet";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import './App.scss';
 import { Navigation } from "./components/Navigation/Navigation";
+import { SkipNavContent } from "@reach/skip-nav";
+import "@reach/skip-nav/styles.css";
 import { Footer } from "./components/Footer/Footer";
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
@@ -200,6 +202,7 @@ function App() {
       
         <Navigation />
 
+        <SkipNavContent />
         <main id="main">
           <Switch>
             <Route 

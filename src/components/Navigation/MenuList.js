@@ -1,5 +1,4 @@
 import * as React from "react";
-import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
@@ -13,7 +12,7 @@ const variants = {
 };
 
 export const MenuList = () => (
-  <motion.ul variants={variants}>
+  <ul variants={variants}>
     {items.map(item => (
       <MenuItem
         key    = { item.id }
@@ -26,7 +25,7 @@ export const MenuList = () => (
         style  = { item.style }
       />
     ))}
-  </motion.ul>
+  </ul>
 );
 
 const iconSize = '2rem';
